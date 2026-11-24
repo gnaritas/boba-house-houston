@@ -280,7 +280,7 @@ cat_body = """<main id="main">
 <p class="bandsub page">Boba House brings its drinks to bigger rooms — booked straight through the shop, one sip at a time.</p>
 </div></section>
 <section class="band"><div class="wrap">
-<div class="cards" style="grid-template-columns:repeat(3,1fr)">
+<div class="cards tri">
 <div class="card"><span class="cupnum">Service 01</span><h3>Parties &amp; events</h3><p>Boba catering for birthdays, hangouts and office parties.</p></div>
 <div class="card"><span class="cupnum">Service 02</span><h3>Charity fundraisers</h3><p>A cup everyone likes at a table that raises money.</p></div>
 <div class="card"><span class="cupnum">Service 03</span><h3>Weddings</h3><p>The sweet spot at the reception — shaken, not stirred.</p></div>
@@ -320,7 +320,7 @@ visit_body = """<main id="main">
 </div></section>
 <section class="band milk"><div class="wrap">
 <div class="bandhead"><div><p class="kick">Three ways in</p><h2>Walk, tap or door-dash</h2></div></div>
-<div class="cards" style="grid-template-columns:repeat(3,1fr)">
+<div class="cards tri">
 <div class="card"><h3>At the counter</h3><p>Walk to Suite 100 and watch the shake. Hours above, closed Tuesdays.</p></div>
 <div class="card"><h3>On Toast</h3><p>Order ahead from the shop's own ordering page and pick up when it's ready.</p></div>
 <div class="card"><h3>On DoorDash</h3><p>Boba delivered from the Galleria area through DoorDash.</p></div>

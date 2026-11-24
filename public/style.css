@@ -96,6 +96,7 @@ section.band.milk .card{background:#fff}
 .card .cupnum{display:block;font-family:inherit;color:var(--ube);font-weight:700;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
 .card a.more{display:inline-block;margin-top:12px;font-weight:700;font-size:.92rem}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cards.tri{grid-template-columns:repeat(3,1fr)}
 
 /* lineups */
 .lineup{display:grid;gap:0;margin:0;padding:0;list-style:none;border:1px solid var(--line);border-radius:16px;background:var(--milk);overflow:hidden}
@@ -166,11 +167,13 @@ hr.tea{border:0;height:2px;background:linear-gradient(90deg,var(--ube),var(--gol
 
 @media (max-width:980px){
   .cards{grid-template-columns:repeat(2,1fr)}
+  .cards.tri{grid-template-columns:repeat(2,1fr)}
   .footline{grid-template-columns:1fr 1fr}
   .duo{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   .cards{grid-template-columns:1fr}
+  .cards.tri{grid-template-columns:1fr}
   .footline{grid-template-columns:1fr}
   .top .wrap{gap:12px}
   nav.main{width:100%;margin-left:0}
