@@ -28,13 +28,15 @@ function out(file, body, res) {
   const ext = path.extname(file).toLowerCase();
   const cache = ext === ".png" || ext === ".jpg" || ext === ".jpeg" ? "public, max-age=86400"
     : ext === ".css" || ext === ".svg" ? "public, max-age=300" : "public, max-age=60";
-  res.writeHead(200, { "content-type": MIME[ext] || "application/octet-stream", "cache-control": cache });
+  const h = { "content-type": MIME[ext] || "application/octet-stream", "cache-control": cache };
+  if (ext === ".html") h["x-robots-tag"] = "noindex, nofollow";
+  res.writeHead(200, h);
   res.end(body);
 }
 
 function serve404(res) {
   fs.readFile(path.join(root, "404.html"), (e, d) => {
-    res.writeHead(404, { "content-type": "text/html; charset=utf-8" });
+    res.writeHead(404, { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, nofollow" });
     res.end(e ? "<h1>404 — not found</h1>" : d.toString());
   });
 }
